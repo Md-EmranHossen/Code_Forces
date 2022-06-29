@@ -3,41 +3,41 @@
 using namespace std;
 int main()
 {
-  
-  int i,j,count;
-  string str;
-  cin>>str;
+    int i,j,count=0;
+    string str;
 
-  int a=str.size();
+    cin>>str;
 
-  for(i=0;i<str.size();i++)
-  {
-     
-     for(j=i+1;j<str.size();j++)
-     {
-        if(str[i]==str[j])
+
+    for(i=0; i<str.length(); i++)
+    {
+        int flag=0;
+        for(j=i+1; j<str.length(); j++)
+        {
+
+
+            if(str[i]==str[j])
+            {
+                flag=1;
+                break;
+            }
+        }
+
+
+        if(flag==0)
         {
             count++;
-            break;
         }
-     }
-
-  }
+    }
 
 
-    int d=a-count;
-
-
-    if(d%2==0)
+    if(count%2==0)
     {
         cout<<"CHAT WITH HER!"<<endl;
     }
-    
+
     else
         cout<<"IGNORE HIM!"<<endl;
 
-
     return 0;
-
-
 }
