@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+ 
+    int i,j,n,A[1001][1001],count,sum=0;
+    cin>>n;
+ 
+    for(i=1;i<=n;i++)
+    {
+ 
+        for(j=1;j<=3;j++)
+        {
+            cin>>A[i][j];
+        }
+    }
+ 
+ 
+   for(i=1;i<=n;i++)
+    {   
+        
+        count =0;
+        for(j=1;j<=3;j++)
+        {
+            if(A[i][j]==1)
+            {
+                count ++;
+            }       
+        }
+        if(count>=2)
+        {
+            sum++;
+        }
+    }
+ 
+     cout<<sum<<endl;
+ 
+     return 0;
+ 
+}
